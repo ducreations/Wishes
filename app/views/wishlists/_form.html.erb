@@ -1,0 +1,14 @@
+<%= form_for @wishes do |f| %>
+  <div class="text-field">
+  <%= f.text_field :name, placeholder: "iPhone", required: true, autofocus: true %>
+  </div>
+  <div class="text-field">
+    <%= f.check_box :status %> Is it granted?
+  </div><br>
+
+  <div class="actions">
+  <%= f.submit "Add wish"%>
+  </div>
+<% end %>
+
+<%= link_to "Cancel", wishlists_path %>

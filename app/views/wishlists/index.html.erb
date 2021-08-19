@@ -1,0 +1,21 @@
+<h1>Wish lists</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Wish</th>
+      <th>Status</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @wishes.each do |wish| %>
+      <tr>
+        <td><%= wish.name %></td>
+        <td><%= wish.status? ? "Granted" : "Denied" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to "Add wish", new_wishlist_path %>
