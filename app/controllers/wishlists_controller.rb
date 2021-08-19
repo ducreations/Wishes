@@ -8,7 +8,7 @@ class WishlistsController < ApplicationController
   end
 
   def create
-    @wishes = Wishlist.new(params.require(:wishlist).permit(:name, :status))
+    @wishes = Wishlist.new(params.require(:wishlist).permit(:name, :status, :user_id))
     if @wishes.save
       redirect_to wishlists_path
     else
